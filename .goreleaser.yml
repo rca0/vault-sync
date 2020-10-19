@@ -1,0 +1,11 @@
+
+brews:
+  - name: vault-sync
+    github:
+      owner: rca0
+      name: homebrew-tap
+    homepage: https://github.com/rca0/vault-sync
+    description: CLI to synchronize data from vault (hashicorp)
+    folder: Formula
+    test: |
+      system "#{bin}/vault-sync -h"
