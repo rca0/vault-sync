@@ -21,6 +21,14 @@ Firstly you must build the tool, using Makefile just execute:
 make build
 ```
 
+## Using homebrew to download binary
+
+```bash
+brew install rca0/tap/vault-sync
+```
+
+## Params
+
 ```bash
 NAME:
    vault-sync - copy vault data
@@ -40,8 +48,8 @@ GLOBAL OPTIONS:
    --help, -h        show help
 ```
 
-## To Run
+## Running
 
 ```bash
-./vault-sync --srcaddr https://vault.domain --dstaddr https://vault-2.domain
+vault-sync --srcaddr https://vault.domain --dstaddr https://vault-2.domain
 ```
