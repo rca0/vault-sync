@@ -25,6 +25,8 @@ type Vault struct {
 }
 
 var (
+	githubRef  string
+	githubSHA  string
 	httpClient = &http.Client{Timeout: 30 * time.Second}
 	tokenPath  = "/.github-token"
 )
@@ -164,8 +166,9 @@ func main() {
 	var v Vault
 
 	app := &cli.App{
-		Name:  "vault-mirror",
-		Usage: "copy vault data",
+		Name:    "vault-sync",
+		Version: fmt.Sprintf("%s commit: %s", githubRef, githubSHA),
+		Usage:   "synchronize vault data",
 		Flags: []cli.Flag{
 			&cli.StringFlag{
 				Name:        "srcaddr",

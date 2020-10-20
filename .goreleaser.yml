@@ -1,6 +1,9 @@
 
 brews:
   - name: vault-sync
+    builds:
+      - ldflags:
+      - -s -w -X "main.githubSHA={{.Env.GITHUB_SHA}} -X "main.githubRef={{.Env.GITHUB_REF}}"
     github:
       owner: rca0
       name: homebrew-tap
