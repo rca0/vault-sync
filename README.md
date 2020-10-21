@@ -27,6 +27,15 @@ make build
 brew install rca0/tap/vault-sync
 ```
 
+## Secret paths
+
+Currently, this CLI tool support these vault secret paths
+
+- kv-v2/
+- secrets/
+
+![image](https://user-images.githubusercontent.com/38728338/96727353-53a98d00-1389-11eb-9ce0-0ba5aa9e08b0.png)
+
 ## Params
 
 ```bash
